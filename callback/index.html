@@ -1,4 +1,13 @@
-Autorizacion recibida
-Copia este codigo:
-
-No se recibio codigo
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Callback</title></head>
+<body>
+  <h1>Autorizacion recibida</h1>
+  <p>Copia este codigo:</p>
+  <pre id="code"></pre>
+  <script>
+    var p = new URLSearchParams(window.location.search);
+    document.getElementById("code").textContent = p.get("code") || "No se recibio codigo";
+  </script>
+</body>
+</html>
